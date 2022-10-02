@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Tip calculator app</title>
+</head>
+<body>
+
+  <main>
+    <nav>
+      <img src="logo.svg" alt="logo">
+    </nav>
+    <div class="wrapper">
+      <div class="inner"> 
+        <div class="calculator">
+          <div class="calculator-left">
+            <form action="#" class="form-calculator" id="form">
+              <label for="bill" class="lbl-bill">Bill</label>
+              <input type="text" class="input-bill" id="bill">
+              <label for="select-tip" class="lbl-select-tip">Select tip %</label>
+
+              
+              <section class="tip-percent">
+                
+                <div class="tip unchecked">
+                  <input type="radio" id="radio-5" name="tip" value="5"/>
+                  <label for="radio-5">5%</label>
+                </div>
+                <div class="tip unchecked">
+                  <input type="radio" id="radio-10" name="tip" value="10"/>
+                  <label for="radio-10">10%</label>
+                </div>
+                <div class="tip unchecked">
+                  <input type="radio" id="radio-15" name="tip" value="15" />
+                  <label for="radio-15">15%</label>
+                </div>
+                <div class="tip unchecked">
+                  <input type="radio" id="radio-25" name="tip" value="25"/>
+                  <label for="radio-25">25%</label>
+                </div>
+                <div class="tip unchecked">
+                  <input type="radio" id="radio-50" name="tip" value="50"/>
+                  <label for="radio-50">50%</label>
+                </div>
+              
+                <input type="number" class="input-tip-percent" id="custom" min="0" max="100" placeholder="Custom" />
+                
+              </section>
+
+              <label for="no-of-people" class="lbl-no-of-people">Number of people</label>
+              <input type="text" class="input-no-of-people" id="number-of-people">
+            </form>
+          </div>
+          <div class="calculator-right">
+            <div class="output-area">
+              <div class="display-area">
+                <p class="tip-amount-lbl">Tip amount <br><span class="per-person">/ Person</span></p>
+                <span class="tip-amount" id="tip">$ 0.00</span>
+              </div>
+              <div class="display-area">
+                <p class="tip-amount-lbl">Total amount <br><span class="per-person">/ Person</span></p>
+                <span class="tip-amount" id="total">$ 0.00</span>
+              </div>
+            </div>
+            <div class="reset-btn" id="reset">Reset</div>  
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
